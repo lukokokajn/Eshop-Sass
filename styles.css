@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: black;
+  position: relative;
+  font-family: Corbel;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  display: block;
+  color: black;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header .logo {
+  color: wheat;
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+
+.header .menu-icon .navicon {
+  background: wheat;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 15px;
+  margin-top: 25px;
+  margin-left: -30px;
+  padding: 0.7px;
+  font-size: 12px;
+}
+
+.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+  background: wheat;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.kart {
+  width: 200px;
+  height: 300px;
+  margin: 35px;
+  background-size: cover;
+  background-image: url("https://store-images.s-microsoft.com/image/apps.26700.13958823218105189.5a0e6185-5389-4d7e-8836-9555f629f20e.b0394933-db71-4ebf-8b2d-1100158fdb9c");
+}
+
+.kartcon {
+  display: flex;
+  text-decoration: none;
+}
+
+.onetext {
+  text-align: center;
+  font-family: Corbel;
+}
+
+.nadpis {
+  padding-top: 41vh;
+  font-size: 18px;
+  font-family: Corbel;
+  text-align: center;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 340px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .header ul {
+    background-color: wheat;
+  }
+
+  .header li a {
+    padding: 15px;
+  }
+
+  .kartcon {
+    display: inline-block;
+  }
+
+  .kart {
+    margin: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .menu-wrapper {
+    background: black;
+    height: 55px;
+    line-height: 55px;
+    width: 100%;
+  }
+
+  .header li {
+    float: left;
+  }
+
+  .header .logo {
+    line-height: 1;
+  }
+
+  .header li a {
+    color: wheat;
+    padding: 0px 30px;
+    font-family: Corbel;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
+.kartinshop {
+  width: 400px;
+  height: 600px;
+  margin: 35px;
+}
+
+/*# sourceMappingURL=styles.css.map */
